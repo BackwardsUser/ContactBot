@@ -1,11 +1,15 @@
-import bodyParser from 'body-parser';
-import { join } from 'node:path';
-import express from 'express';
 import { Client, Embed, EmbedBuilder } from 'discord.js';
+import { join } from 'node:path';
+import { config } from 'dotenv';
+import express from 'express';
+
 import { FormBody } from './interfaces';
+import { port } from './types'
+
+config();
 
 var app = express();
-var port: string = "3000";
+var port: port = process.env.PORT;
 
 export default function init(client: Client) {
 
