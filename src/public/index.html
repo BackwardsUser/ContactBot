@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Message</title>
+</head>
+<body>
+    <h1>Testing Message System</h1>
+    <p>A System in tested that will take input messages from an HTML Input Element and send it to a Discord bot and the bot will send it to a predetermined Channel.</p>
+    <form action="/messageSend" method="post">
+        <h2>Contact</h2>
+        <fieldset>
+            <legend>Content</legend>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Message Content" required></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Your Information</legend>
+            Return information, only used to send a return message.
+            <input type="text" name="FullName" id="fullname" placeholder="Full Name" required>
+            <input type="email" name="Email" id="email" placeholder="Email">
+        </fieldset>
+        <fieldset>
+            <legend>Other Contact Methods</legend>
+            <input type="text" name="Discord" id="discord" placeholder="Discord">
+            <input type="text" name="Instagram" id="instagram" placeholder="Instagram">
+            <input type="tel" name="Telephone" id="telephone" placeholder="Phone (Text)">
+            <textarea name="Other" id="other" cols="10" rows="3" placeholder="Other (Please Specify)"></textarea>
+        </fieldset>
+        <div class="buttons">
+            <button type="submit" class="submit">Send</button>
+        </div>
+    </form>
+</body>
+</html>
