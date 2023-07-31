@@ -1,5 +1,7 @@
 import { Client, Events, GatewayIntentBits, Message } from "discord.js";
 import site from "./site";
+import {config} from "dotenv";
+config();
 
 var intents: GatewayIntentBits[] = [
     GatewayIntentBits.Guilds,
@@ -16,4 +18,4 @@ client.once(Events.ClientReady, async () => {
     site(client);
 });
 
-client.login("NzUyOTgxMzQ0NzUzMjg3MjQ1.GKMYpP.aVUqLH5ujcWi9Liwwt9PZZVV3yVpSkl4iQae6k");
+client.login(process.env.TOKEN);
